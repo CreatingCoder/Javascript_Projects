@@ -3,24 +3,25 @@ var ctx = canvas.getContext('2d');
 
 var movementInt;
 var drawInt;
+var width = canvas.width;
+var height = canvas.height;
+
 
 
 
 var player = {
     x: 0,
     y: 0,
-    w: 40,
-    h: 40,
-    speed: 40, 
+    w: 20,
+    h: 20,
+    speed: 10, 
 }
 
-
-function start() {
 
 movementInt = setInterval(movement, 1);
 drawInt = setInterval(draw, 1);
 
-}
+
 
 function movement(){
     document.onkeydown = function(e){
@@ -52,6 +53,8 @@ function movement(){
 
 
 function draw(){
+
+    
     ctx.clearRect(0,0, canvas.width, canvas.height);
 
     ctx.fillStyle = "red";
